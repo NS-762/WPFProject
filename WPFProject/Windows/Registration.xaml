@@ -1,0 +1,35 @@
+﻿<Window x:Class="WPFProject.Windows.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFProject.Windows"
+        ResizeMode="CanMinimize"
+        mc:Ignorable="d"
+        Title="Registration" Height="385" Width="250">
+
+    <StackPanel Margin="5">
+        <Label Content="Фамилия:"/>
+        <TextBox Name="textBoxSecondName"/>
+
+        <Label Content="Имя:"/>
+        <TextBox Name="textBoxFirstName"/>
+
+        <Label Content="Отчество:"/>
+        <TextBox Name="textBoxThirdName"/>
+
+        <Label Content="Телефон:"/>
+        <TextBox Name="textBoxPhoneNumber"/>
+
+        <Label Content="E-mail:"/>
+        <TextBox Name="textBoxEMail"/>
+
+        <Label Content="Пароль:"/>
+        <PasswordBox Name="textBoxPassword"/>
+
+
+        <Label Content=""/>
+        <Button Click="ButtonRegistration_Click" Background="#FFA49984" BorderBrush="#FFA49984" Foreground="White" FontWeight="Bold" Height="30" Width="150">Зарегистрироваться</Button>
+
+    </StackPanel>
+</Window>
