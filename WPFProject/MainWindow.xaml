@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         ResizeMode="CanMinimize"
         Title="Магазин холодного оружия" Height="550" Width="900" Background="#FFA49984">
+
     <Grid Visibility="Visible" Background="#FF3E3D3E">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -25,8 +26,6 @@
             </Grid.RowDefinitions>
             <TextBlock  Foreground="White" FontWeight="Bold" Background="#333233" Grid.RowSpan="2"/>
             <Image Source="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\moon.png" Margin="-60,0,-153,0" Grid.RowSpan="2"/>
-
-
 
         </Grid>
 
@@ -49,10 +48,6 @@
 
 
             <Button Grid.Column="0" Click="ButtonRegistration_Click" Background="#FFA49984" BorderBrush="#FFA49984" Foreground="White" FontWeight="Bold">
-                <!--<TextBlock  Text=" Регистрация" TextWrapping="Wrap" TextAlignment="Center">
-                     <Image Source="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\add-user-2-48.png" Height="20"/>
-                </TextBlock>-->
-
                 <StackPanel>
                     <Image Source="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\reg.png" Height="20" />
                     <TextBlock>Регистрация</TextBlock>
@@ -62,10 +57,6 @@
             </Button>
 
             <Button Grid.Column="2" Click="ButtonAuthentication_Click" Background="#FFA49984" BorderBrush="#FFA49984" Foreground="White" FontWeight="Bold">
-                <!--<TextBlock Text="Войти в личный кабинет" TextWrapping="Wrap" TextAlignment="Center"/>-->
-                <!--<TextBlock  Text="Кабинет" TextWrapping="Wrap" TextAlignment="Center">
-                     <Image Source="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\add-user-2-48.png" Height="20"/>
-                </TextBlock>-->
                 <StackPanel>
                     <Image Source="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\auth1.png" Height="20" />
                     <TextBlock>Войти</TextBlock>
@@ -73,12 +64,57 @@
 
             </Button>
 
-            <Button Grid.Column="3" Background="#FFA49984" BorderBrush="#FFA49984" Foreground="White" FontWeight="Bold" Click="Button_Click">
+            <Button Grid.Column="3" Click="ButtonCart_Click" Background="#FFA49984" BorderBrush="#FFA49984" Foreground="White" FontWeight="Bold">
                 <Image Source="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\cart.png" Height="38"/>
             </Button>
+
+
+
         </Grid>
 
+        <Grid Name="Middle" Grid.Row="1" Grid.Column="1">
 
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="0" Grid.Column="0"  Width="200" Height="220" Margin="219,10,275,6" Grid.ColumnSpan="2">
+                <Image Source="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\1.png" Height="140" Margin="0, 15, 0, 0"/>
+                <TextBlock Text="Мачете 2 МА-851" HorizontalAlignment="Center" Height="18" Foreground="White" FontSize="15"/>
+                <TextBlock Text="2500 руб." HorizontalAlignment="Center" Height="18" Foreground="White"/>
+                <Button Content="Добавить в корзину" Width="130" Background="#FF7C7878" Click="AddProductOneInCart_Click"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="0" Grid.Column="1"  Width="200" Height="220" Margin="115,10,32,6">
+                <Image Source="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\2.png" Height="140" Margin="0, 15, 0, 0"/>
+                <TextBlock Text="Нож Ka-Bar 2221" HorizontalAlignment="Center" Height="18" Foreground="White" FontSize="15"/>
+                <TextBlock Text="7500 руб." HorizontalAlignment="Center" Height="18" Foreground="White"/>
+                <Button Content="Добавить в корзину" Width="130" Background="#FF7C7878" Click="AddProductTwoInCart_Click"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="0" Width="200" Height="220" Margin="219,5,275,10" Grid.ColumnSpan="2">
+                <Image Source="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\3.png" Height="140" Margin="0, 15, 0, 0"/>
+                <TextBlock Text="Топор Trench Hawk" HorizontalAlignment="Center" Height="18" Foreground="White" FontSize="15"/>
+                <TextBlock Text="3450 руб." HorizontalAlignment="Center" Height="18" Foreground="White"/>
+                <Button Content="Добавить в корзину" Width="130" Background="#FF7C7878" Click="AddProductThreeInCart_Click"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="1" Width="200" Height="220" Margin="115,5,32,10">
+                <Image Source="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\4.png" Height="140" Margin="0, 15, 0, 0"/>
+                <TextBlock Text="Нож Fallkniven PRK Z" HorizontalAlignment="Center" Height="18" Foreground="White" FontSize="15"/>
+                <TextBlock Text="10200 руб." HorizontalAlignment="Center" Height="18" Foreground="White"/>
+                <Button Content="Добавить в корзину" Width="130" Background="#FF7C7878" Click="AddProductFourInCart_Click"/>
+            </StackPanel>
+
+
+        </Grid>
 
     </Grid>
 </Window>

@@ -63,12 +63,13 @@ namespace WPFProject.Windows
 
         public void FillDGOrders()
         {
-            Orders.listOrders.Add(new Order("10", "10", "10", "10", "10"));
+            //Orders.listOrders.Add(new Order("10", "10", "10", "10", "10"));
             dgOrders.ItemsSource = Orders.listOrders;
         }
 
-        public void UpdateDGOrderss()
+        public void AddOrder(User user)
         {
+            Orders.listOrders.Add(new Order("000", user.SecondName, user.FirstName, user.ThirdName, user.EMail));
             dgOrders.ItemsSource = null;
             dgOrders.ItemsSource = Orders.listOrders;
         }
@@ -79,40 +80,12 @@ namespace WPFProject.Windows
             Orders.listOrders.Add(new Order("20", "20", "20", "20", "20"));
             Orders.listOrders.Add(new Order("101", "101", "101", "101", "101"));
             dgOrders.ItemsSource = Orders.listOrders;
-
-
-            //Orders.listOrders.ListChanged += ListOrders_ListChanged;
         }
-
-        //private void ListOrders_ListChanged(object sender, System.ComponentModel.ListChangedEventArgs e)
-        //{
-        //    switch (e.ListChangedType)
-        //    {
-        //        case System.ComponentModel.ListChangedType.Reset:
-        //            break;
-        //        case System.ComponentModel.ListChangedType.ItemAdded:
-        //            break;
-        //        case System.ComponentModel.ListChangedType.ItemDeleted:
-        //            break;
-        //        case System.ComponentModel.ListChangedType.ItemMoved:
-        //            break;
-        //        case System.ComponentModel.ListChangedType.ItemChanged:
-        //            break;
-        //        case System.ComponentModel.ListChangedType.PropertyDescriptorAdded:
-        //            break;
-        //        case System.ComponentModel.ListChangedType.PropertyDescriptorDeleted:
-        //            break;
-        //        case System.ComponentModel.ListChangedType.PropertyDescriptorChanged:
-        //            break;
-        //        default:
-        //            break;
-        //    }
-        //}
 
         public void DeletedOrder(Order order)
         {
             Orders.listOrders.Remove(order);
-            //UpdateDGOrderss();
         }
+
     }
 }

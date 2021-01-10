@@ -67,7 +67,7 @@
             </Grid.RowDefinitions>
 
             <TextBlock Background="#333233" Foreground="White" FontWeight="Bold"/>
-            <Image Source="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\pngwing.com (2).png" Grid.RowSpan="2" Margin="-36,-134,-98,-159" />
+            <Image Source="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\pngwing.com (2).png" Grid.RowSpan="2" Margin="-70,-135,-64,-158" />
 
         </Grid>
 
@@ -82,14 +82,9 @@
                     <DataGridTextColumn Binding="{Binding Path=ThirdName}" Header="Отчество" Width="90"/>
                     <DataGridTextColumn Binding="{Binding Path=PhoneNumber}" Header="Номер телефона" Width="140"/>
                     <DataGridTextColumn Binding="{Binding Path=EMail}" Header="E-mail" Width="*"/>
-                    
+
                 </DataGrid.Columns>
             </DataGrid>
-
-
-            <!--<ListView Name="lvUsers"  Height="300" Width="600">
-                
-            </ListView>-->
         </Grid>
 
     </Grid>

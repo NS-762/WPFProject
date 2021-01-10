@@ -1,0 +1,30 @@
+﻿<Window x:Class="WPFProject.Windows.Cart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFProject.Windows"
+        mc:Ignorable="d"
+        Title="Cart" Height="450" Width="700">
+    <Window.Background>
+        <ImageBrush ImageSource="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\fonCart.png" />
+    </Window.Background>
+    <Grid>
+
+        <StackPanel>
+
+            <DataGrid x:Name="dgProducts" Height="280" Width="500" AutoGenerateColumns="false" Margin="0, 50, 0, 0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path=ProductName}" Header="Название товара" Width="*"/>
+                    <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path=Price}" Header="Цена за шт." Width="90"/>
+                    <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path=Quantity}" Header="Количество" Width="90"/>
+                    <DataGridCheckBoxColumn IsReadOnly="False" Binding="{Binding Path=Delete, UpdateSourceTrigger=PropertyChanged}" Header="Удалить" Width="80"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Button Content="Заказать" Width="100" Margin="0, 20, 0, 0" Background="White" Click="ButtonBuy_Click"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

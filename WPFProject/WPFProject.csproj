@@ -57,10 +57,14 @@
     </ApplicationDefinition>
     <Compile Include="Additional classes\AllWindows.cs" />
     <Compile Include="Additional classes\Order.cs" />
+    <Compile Include="Additional classes\Product.cs" />
     <Compile Include="Additional classes\Users.cs" />
     <Compile Include="Additional classes\WorkWithXML.cs" />
     <Compile Include="Windows\Authentication.xaml.cs">
       <DependentUpon>Authentication.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Cart.xaml.cs">
+      <DependentUpon>Cart.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\MainAdmin.xaml.cs">
       <DependentUpon>MainAdmin.xaml</DependentUpon>
@@ -90,6 +94,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Windows\Authentication.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Cart.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
