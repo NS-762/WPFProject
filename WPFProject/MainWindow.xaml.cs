@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using WPFProject.Additional_classes;
 
 using System.ComponentModel;
+using WPFProject.Windows;
 
 namespace WPFProject
 {
@@ -49,6 +50,10 @@ namespace WPFProject
 
             listProducts = new BindingList<Product>(); //список опкупок
 
+            Promotion promotion = new Promotion(); //вызов окна с акцией
+            promotion.Show();
+            promotion.Activate();
+            promotion.Topmost = true; 
 
             WindowStartupLocation = WindowStartupLocation.CenterScreen; //чтобы окно было по центру экрана
         }

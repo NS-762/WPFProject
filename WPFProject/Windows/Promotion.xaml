@@ -1,0 +1,27 @@
+﻿<Window x:Class="WPFProject.Windows.Promotion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFProject.Windows"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        
+        mc:Ignorable="d"
+        Title="Promotion" Height="385" Width="300" Background="#FFA49984">
+
+
+        <StackPanel Margin="5" Background="#FFA49984">
+
+            <TextBox TextWrapping="Wrap" Text="АКЦИЯ!" FontSize="30" FontWeight="Bold" Background="#FFA49984" HorizontalAlignment="Center"
+                     Foreground="White" BorderBrush="#FFA49984"/>
+
+
+            <TextBox TextWrapping="Wrap" Text="При покупке товара на сумму свыше десяти тысяч рублей доставка товара будет осуществляться курьером до двери вашего дома БЕСПЛАТНО"
+                     FontSize="16" FontWeight="Bold" Background="#FFA49984" HorizontalContentAlignment="Center"
+                     Foreground="White" BorderBrush="#FFA49984"/>
+           
+            <Image gif:ImageBehavior.RepeatBehavior="Forever"
+                     gif:ImageBehavior.AnimatedSource="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\HomerByCar.gif"/>
+
+        </StackPanel>
+</Window>

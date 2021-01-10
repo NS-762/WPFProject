@@ -75,5 +75,10 @@ namespace WPFProject.Windows
             Orders.listOrders.Remove(order);
         }
 
+        private void ButtonPromotion_Click(object sender, RoutedEventArgs e) //вызов основного окна, выход из личного кабинета
+        {
+            Promotion promotion = new Promotion();
+            promotion.Show();
+        }
     }
 }
