@@ -21,27 +21,22 @@ namespace WPFProject.Windows
     /// </summary>
     public partial class MainAdmin : Window
     {
-        public string UserType { get; set; }
+        /*public string UserType { get; set; }
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public string ThirdName { get; set; }
         public string PhoneNumber { get; set; }
         public string EMail { get; set; }
-        public string Password { get; set; }
+        public string Password { get; set; }*/
 
-        public MainAdmin(string userType, string firstName, string secondName, string thirdName, string phoneNumber, string eMail, string password)
+        private User user;
+
+        public MainAdmin(User user)
         {
             InitializeComponent();
             AllWindows.mainAdmin = this; //запись окна в класс, где хранятся ссылки на все окна
 
-
-            UserType = userType;
-            FirstName = firstName;
-            SecondName = secondName;
-            ThirdName = thirdName;
-            PhoneNumber = phoneNumber;
-            EMail = eMail;
-            Password = password;
+            this.user = user;
 
             FillDGUsers();
             
@@ -50,7 +45,7 @@ namespace WPFProject.Windows
 
         private void ButtonMyData_Click(object sender, RoutedEventArgs e) //вызов окна с данными пользователя
         {
-            MyPersonalData myPersonalData = new MyPersonalData(UserType, FirstName, SecondName, ThirdName, PhoneNumber, EMail);
+            MyPersonalData myPersonalData = new MyPersonalData(user.UserType, user.FirstName, user.SecondName, user.ThirdName, user.PhoneNumber, user.EMail);
             myPersonalData.Show();
         }
 
@@ -59,8 +54,6 @@ namespace WPFProject.Windows
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
-            MessageBox.Show("Вы вышли из личного кабинета");
-
         }
 
         private void ButtonAddEmployee_Click(object sender, RoutedEventArgs e) //вызов основного окна, выход из личного кабинета

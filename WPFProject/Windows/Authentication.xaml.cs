@@ -44,18 +44,18 @@ namespace WPFProject.Windows
 
                         if (item.UserType.Equals("Администратор"))  //если тип пользователя - админ, то открыть окно, предназначенное для админа
                         {
-                            MainAdmin mainAdmin = new MainAdmin(item.UserType, item.FirstName, item.SecondName, item.ThirdName, item.PhoneNumber, item.EMail, item.Password);
+                            MainAdmin mainAdmin = new MainAdmin(item);
                             mainAdmin.Show();
                         }
                         else if (item.UserType.Equals("Сотрудник"))  //если тип пользователя - сотрудник, то открыть окно, предназначенное для сотрудника
                         {
-                            MainEmployee mainEmployee = new MainEmployee(item.UserType, item.FirstName, item.SecondName, item.ThirdName, item.PhoneNumber, item.EMail, item.Password);
+                            MainEmployee mainEmployee = new MainEmployee(item);
                             mainEmployee.Show();
                             
                         }
                         else if (item.UserType.Equals("Клиент")) //если тип пользователя - клиент, то открыть окно, предназначенное для клиента
                         {
-                            MainClient mainClient = new MainClient(item.UserType, item.FirstName, item.SecondName, item.ThirdName, item.PhoneNumber, item.EMail, item.Password);
+                            MainClient mainClient = new MainClient(item);
                             mainClient.Show();
                         }
                         AllWindows.mainWindow.Close();

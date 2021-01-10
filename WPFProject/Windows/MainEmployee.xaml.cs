@@ -20,36 +20,31 @@ namespace WPFProject.Windows
     /// </summary>
     public partial class MainEmployee : Window
     {
-        public string UserType { get; set; }
+        /*public string UserType { get; set; }
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public string ThirdName { get; set; }
         public string PhoneNumber { get; set; }
         public string EMail { get; set; }
-        public string Password { get; set; }
+        public string Password { get; set; }*/
 
-        public MainEmployee(string userType, string firstName, string secondName, string thirdName, string phoneNumber, string eMail, string password)
+        private User user;
+
+        public MainEmployee(User user)
         {
             InitializeComponent();
             AllWindows.mainEmployee = this; //запись окна в класс, где хранятся ссылки на все окна
 
+            this.user = user;
 
-            UserType = userType;
-            FirstName = firstName;
-            SecondName = secondName;
-            ThirdName = thirdName;
-            PhoneNumber = phoneNumber;
-            EMail = eMail;
-            Password = password;
-
-            //FillDGOrders();
+            FillDGOrders();
 
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
         private void ButtonMyData_Click(object sender, RoutedEventArgs e) //вызов окна с данными пользователя
         {
-            MyPersonalData myPersonalData = new MyPersonalData(UserType, FirstName, SecondName, ThirdName, PhoneNumber, EMail);
+            MyPersonalData myPersonalData = new MyPersonalData(user.UserType, user.FirstName, user.SecondName, user.ThirdName, user.PhoneNumber, user.EMail);
             myPersonalData.Show();
         }
 
@@ -58,29 +53,22 @@ namespace WPFProject.Windows
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
-            MessageBox.Show("Вы вышли из личного кабинета");
         }
 
         public void FillDGOrders()
         {
-            //Orders.listOrders.Add(new Order("10", "10", "10", "10", "10"));
             dgOrders.ItemsSource = Orders.listOrders;
         }
 
-        public void AddOrder(User user)
+        /*public void AddOrder(User user)
         {
+            int numberOrder 
+
             Orders.listOrders.Add(new Order("000", user.SecondName, user.FirstName, user.ThirdName, user.EMail));
             dgOrders.ItemsSource = null;
             dgOrders.ItemsSource = Orders.listOrders;
-        }
+        }*/
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            Orders.listOrders.Add(new Order("10", "10", "10", "10", "10"));
-            Orders.listOrders.Add(new Order("20", "20", "20", "20", "20"));
-            Orders.listOrders.Add(new Order("101", "101", "101", "101", "101"));
-            dgOrders.ItemsSource = Orders.listOrders;
-        }
 
         public void DeletedOrder(Order order)
         {

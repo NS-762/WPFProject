@@ -70,9 +70,16 @@ namespace WPFProject.Windows
             }
             else
             {
-                MessageBox.Show("Покупка совершена успешно");
-                listProducts.Clear();
-                AllWindows.mainEmployee.AddOrder(user);
+                if (listProducts.Count != 0)
+                {
+                    MessageBox.Show("Покупка совершена успешно");
+                    listProducts.Clear();
+                    Orders.listOrders.Add(new Order("000", user.FirstName, user.SecondName, user.ThirdName, user.EMail));
+                } 
+                else
+                {
+                    MessageBox.Show("Ваша корзина пуста");
+                }
             }
         }
 

@@ -8,14 +8,12 @@ using System.Threading.Tasks;
 namespace WPFProject.Additional_classes
 {
 
-    [Serializable]
     public class Orders
     {
         public static BindingList<Order> listOrders = new BindingList<Order>();
     }
 
-    [Serializable]
-    public class Order  /*INotifyPropertyChanged*/
+    public class Order 
     {
 
 
@@ -32,8 +30,6 @@ namespace WPFProject.Additional_classes
                 _orderStatus = value;
                 
                 AllWindows.mainEmployee.DeletedOrder(this); //если поменять статус заказа, он удалится из списка заказов
-                
-                //OnPropertyChanged("_orderStatus");
             }
         }
         
@@ -55,12 +51,5 @@ namespace WPFProject.Additional_classes
             CustomerThirdName = customerThirdName;
             CustomerEMail = customerEMail;
         }
-
-        //public event PropertyChangedEventHandler PropertyChanged;
-
-        //protected virtual void OnPropertyChanged(string propertyName = "")
-        //{
-        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        //}
     }
 }

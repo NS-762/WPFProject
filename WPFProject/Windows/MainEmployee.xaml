@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFProject.Windows"
         ResizeMode="CanMinimize"
         mc:Ignorable="d"
-        Title="Магазин холодного оружия" Height="550" Width="900" Background="#FFA49984" Loaded="Window_Loaded">
+        Title="Магазин холодного оружия" Height="550" Width="900" Background="#FFA49984">
 
     <Grid Visibility="Visible" Background="#FF3E3D3E">
         <Grid.RowDefinitions>
@@ -68,8 +68,6 @@
                     <TextBlock>Акции</TextBlock>
                 </StackPanel>
             </Button>
-
-
         </Grid>
 
 
@@ -80,21 +78,18 @@
 
             <DataGrid x:Name="dgOrders" Height="300" Width="640" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn IsReadOnly="True" Header="№ заказа" Width="80"/>
-                    <DataGridCheckBoxColumn IsReadOnly="False" Binding="{Binding Path=OrderStatus, UpdateSourceTrigger=PropertyChanged}" Header="Состояние" Width="70"/>
-                    <DataGridTextColumn IsReadOnly="True" Header="Фамилия" Width="90"/>
-                    <DataGridTextColumn IsReadOnly="True" Header="Имя" Width="90"/>
-                    <DataGridTextColumn IsReadOnly="True" Header="Отчество" Width="90"/>
+                    <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path=OrderNumber}" Header="№ заказа" Width="70"/>
+                    <DataGridCheckBoxColumn IsReadOnly="False" Binding="{Binding Path=OrderStatus, UpdateSourceTrigger=PropertyChanged}" Header="Отправить" Width="70"/>
+                    <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path=СustomerSecondName}" Header="Фамилия" Width="90"/>
+                    <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path=СustomerFirstName}" Header="Имя" Width="90"/>
+                    <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path=CustomerThirdName}" Header="Отчество" Width="90"/>
 
-                    <DataGridTextColumn IsReadOnly="True" Header="E-mail" Width="90"/>
-                    <DataGridTextColumn IsReadOnly="True" Header="Дата заказа" Width="*"/>
+                    <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path=CustomerEMail}" Header="E-mail" Width="90"/>
+                    <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path=OrderDate}" Header="Дата заказа" Width="*"/>
 
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-
-
-
 
     </Grid>
 </Window>
