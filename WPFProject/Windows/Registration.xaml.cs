@@ -13,7 +13,7 @@ namespace WPFProject.Windows
         public Registration(string userType)
         {
             InitializeComponent();
-            AllWindows.registration = this;
+            AllWindows.Registration = this;
 
             
             this.userType = userType; //кого добавлять: пользователя или сотрудника (админ добавляет сотрудников)
@@ -42,8 +42,8 @@ namespace WPFProject.Windows
                 textBoxFirstName.Text,
                 textBoxSecondName.Text,
                 textBoxThirdName.Text,
-                textBoxEMail.Text,
                 textBoxPhoneNumber.Text,
+                textBoxEMail.Text,
                 textBoxPassword.Password); //создание пользователя и заполнение его полей
 
                 Users.listUsers.Add(user); //добавление пользователя в список пользователей
@@ -52,10 +52,12 @@ namespace WPFProject.Windows
                 MessageBox.Show("Регистрация прошла успешно");
 
 
-                if (AllWindows.mainAdmin != null)
+                if (AllWindows.MainAdmin != null)
                 {
-                    AllWindows.mainAdmin.AddItemDGUsers(user);
+                    AllWindows.MainAdmin.AddItemDGUsers(user);
                 }
+
+                this.Close();
                 
             }
             else

@@ -23,6 +23,7 @@ namespace WPFProject.Additional_classes
         public string PhoneNumber { get; set; }
         public string EMail { get; set; }
         public string Password { get; set; }
+        public int Cash { get; set; } = 0;
 
         public User() { }
 

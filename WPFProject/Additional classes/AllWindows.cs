@@ -8,11 +8,11 @@ namespace WPFProject.Additional_classes
 {
     class AllWindows
     {
-        public static MainWindow mainWindow { get; set; }
-        public static Windows.Registration registration { get; set; }
-        public static Windows.MainAdmin mainAdmin { get; set; }
-        public static Windows.MainEmployee mainEmployee { get; set; }
-        public static Windows.MainClient mainClient { get; set; }
-        public static Windows.Cart cart { get; set; }
+        public static MainWindow MainWindow { get; set; }
+        public static Windows.Registration Registration { get; set; }
+        public static Windows.MainAdmin MainAdmin { get; set; }
+        public static Windows.MainEmployee MainEmployee { get; set; }
+        public static Windows.MainClient MainClient { get; set; }
+        public static Windows.Cart Cart { get; set; }
     }
 }

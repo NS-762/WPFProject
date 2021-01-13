@@ -20,20 +20,12 @@ namespace WPFProject.Windows
     /// </summary>
     public partial class MainEmployee : Window
     {
-        /*public string UserType { get; set; }
-        public string FirstName { get; set; }
-        public string SecondName { get; set; }
-        public string ThirdName { get; set; }
-        public string PhoneNumber { get; set; }
-        public string EMail { get; set; }
-        public string Password { get; set; }*/
-
         private User user;
 
         public MainEmployee(User user)
         {
             InitializeComponent();
-            AllWindows.mainEmployee = this; //запись окна в класс, где хранятся ссылки на все окна
+            AllWindows.MainEmployee = this; //запись окна в класс, где хранятся ссылки на все окна
 
             this.user = user;
 
@@ -59,16 +51,6 @@ namespace WPFProject.Windows
         {
             dgOrders.ItemsSource = Orders.listOrders;
         }
-
-        /*public void AddOrder(User user)
-        {
-            int numberOrder 
-
-            Orders.listOrders.Add(new Order("000", user.SecondName, user.FirstName, user.ThirdName, user.EMail));
-            dgOrders.ItemsSource = null;
-            dgOrders.ItemsSource = Orders.listOrders;
-        }*/
-
 
         public void DeletedOrder(Order order)
         {

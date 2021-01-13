@@ -30,7 +30,7 @@ namespace WPFProject
         public MainWindow()
         {
             InitializeComponent();
-            AllWindows.mainWindow = this;
+            AllWindows.MainWindow = this;
             
             if (!File.Exists("Users.xml")) //проверить, есть ли файл с пользователями
             {
@@ -76,32 +76,60 @@ namespace WPFProject
             cart = new Windows.Cart(listProducts); //привязать корзину
             cart.Show();
         }
-
         private void AddProductOneInCart_Click(object sender, RoutedEventArgs e)
         {
-            Product product = new Product("Мачете 2 МА-851", "2500 руб.");
+            Product product = new Product("Мачете 2 МА-851", 2500);
             AddProductInCart(product); //вызов метода добавления продукта в корзину
+            СhangeOrderPrice(product);
         }
 
         private void AddProductTwoInCart_Click(object sender, RoutedEventArgs e)
         {
-            Product product = new Product("Нож Ka-Bar 2221", "7500 руб.");
+            Product product = new Product("Нож Ka-Bar 2221", 7500);
             AddProductInCart(product); //вызов метода добавления продукта в корзину
+            СhangeOrderPrice(product);
         }
 
 
         private void AddProductThreeInCart_Click(object sender, RoutedEventArgs e)
         {
-            Product product = new Product("Топор Trench Hawk", "3450 руб.");
+            Product product = new Product("Топор Trench Hawk", 3450);
             AddProductInCart(product); //вызов метода добавления продукта в корзину
+            СhangeOrderPrice(product);
         }
 
 
         private void AddProductFourInCart_Click(object sender, RoutedEventArgs e)
         {
-            Product product = new Product("Нож Fallkniven PRK Z", "10200 руб.");
+            Product product = new Product("Нож Fallkniven PRK Z", 10200);
             AddProductInCart(product); //вызов метода добавления продукта в корзину
+            СhangeOrderPrice(product);
         }
+        //private void AddProductOneInCart_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Product product = new Product("Мачете 2 МА-851", "2500 руб.");
+        //    AddProductInCart(product); //вызов метода добавления продукта в корзину
+        //}
+
+        //private void AddProductTwoInCart_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Product product = new Product("Нож Ka-Bar 2221", "7500 руб.");
+        //    AddProductInCart(product); //вызов метода добавления продукта в корзину
+        //}
+
+
+        //private void AddProductThreeInCart_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Product product = new Product("Топор Trench Hawk", "3450 руб.");
+        //    AddProductInCart(product); //вызов метода добавления продукта в корзину
+        //}
+
+
+        //private void AddProductFourInCart_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Product product = new Product("Нож Fallkniven PRK Z", "10200 руб.");
+        //    AddProductInCart(product); //вызов метода добавления продукта в корзину
+        //}
 
         private void AddProductInCart(Product product) //сюда передает объект типа продукт
         {
@@ -120,6 +148,13 @@ namespace WPFProject
             listProducts.Add(product); //если продукта такого нет, то создать
         }
 
+        private void СhangeOrderPrice(Product product) //сюда передает объект типа продукт
+        {
+            if (cart != null) //если окно карзины есть, то список в окне обновить
+            {
+                cart.IncreaseOrderPrice(product);
+            }
+        }
     }
 }
 

@@ -21,20 +21,13 @@ namespace WPFProject.Windows
     /// </summary>
     public partial class MainAdmin : Window
     {
-        /*public string UserType { get; set; }
-        public string FirstName { get; set; }
-        public string SecondName { get; set; }
-        public string ThirdName { get; set; }
-        public string PhoneNumber { get; set; }
-        public string EMail { get; set; }
-        public string Password { get; set; }*/
 
         private User user;
 
         public MainAdmin(User user)
         {
             InitializeComponent();
-            AllWindows.mainAdmin = this; //запись окна в класс, где хранятся ссылки на все окна
+            AllWindows.MainAdmin = this; //запись окна в класс, где хранятся ссылки на все окна
 
             this.user = user;
 

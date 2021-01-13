@@ -5,20 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFProject.Windows"
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
-        
+        ResizeMode="CanMinimize"
         mc:Ignorable="d"
         Title="Promotion" Height="385" Width="300" Background="#FFA49984">
 
 
         <StackPanel Margin="5" Background="#FFA49984">
 
-            <TextBox TextWrapping="Wrap" Text="АКЦИЯ!" FontSize="30" FontWeight="Bold" Background="#FFA49984" HorizontalAlignment="Center"
-                     Foreground="White" BorderBrush="#FFA49984"/>
+            <TextBlock TextWrapping="Wrap" Text="АКЦИЯ!" FontSize="30" FontWeight="Bold" Background="#FFA49984" HorizontalAlignment="Center"
+                     Foreground="White"/>
 
 
-            <TextBox TextWrapping="Wrap" Text="При покупке товара на сумму свыше десяти тысяч рублей доставка товара будет осуществляться курьером до двери вашего дома БЕСПЛАТНО"
-                     FontSize="16" FontWeight="Bold" Background="#FFA49984" HorizontalContentAlignment="Center"
-                     Foreground="White" BorderBrush="#FFA49984"/>
+            <TextBlock TextWrapping="Wrap" Text="При покупке товара на сумму свыше десяти тысяч рублей доставка товара будет осуществляться курьером до двери вашего дома БЕСПЛАТНО"
+                     FontSize="16" FontWeight="Bold" Background="#FFA49984" TextAlignment="Center"
+                     Foreground="White"/>
            
             <Image gif:ImageBehavior.RepeatBehavior="Forever"
                      gif:ImageBehavior.AnimatedSource="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\HomerByCar.gif"/>

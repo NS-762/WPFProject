@@ -24,14 +24,6 @@ namespace WPFProject.Windows
     public partial class MainClient : Window
     {
 
-        /*public string UserType { get; set; }
-        public string FirstName { get; set; }
-        public string SecondName { get; set; }
-        public string ThirdName { get; set; }
-        public string PhoneNumber { get; set; }
-        public string EMail { get; set; }
-        public string Password { get; set; }*/
-
         private User user;
         private Windows.Cart cart;
         private BindingList<Product> listProducts;
@@ -40,16 +32,7 @@ namespace WPFProject.Windows
         public MainClient(User user)
         {
             InitializeComponent();
-            AllWindows.mainClient = this; //запись окна в класс, где хранятся ссылки на все окна
-
-            /*UserType = user.UserType;
-            FirstName = user.FirstName;
-            SecondName = user.SecondName;
-            ThirdName = user.ThirdName;
-            PhoneNumber = user.PhoneNumber;
-            EMail = user.EMail;
-            Password = user.Password;*/
-
+            AllWindows.MainClient = this; //запись окна в класс, где хранятся ссылки на все окна
             this.user = user;
 
             listProducts = new BindingList<Product>(); //список опкупок
@@ -78,28 +61,32 @@ namespace WPFProject.Windows
 
         private void AddProductOneInCart_Click(object sender, RoutedEventArgs e)
         {
-            Product product = new Product("Мачете 2 МА-851", "2500 руб.");
+            Product product = new Product("Мачете 2 МА-851", 2500);
             AddProductInCart(product); //вызов метода добавления продукта в корзину
+            СhangeOrderPrice(product);
         }
 
         private void AddProductTwoInCart_Click(object sender, RoutedEventArgs e)
         {
-            Product product = new Product("Нож Ka-Bar 2221", "7500 руб.");
+            Product product = new Product("Нож Ka-Bar 2221", 7500);
             AddProductInCart(product); //вызов метода добавления продукта в корзину
+            СhangeOrderPrice(product);
         }
 
 
         private void AddProductThreeInCart_Click(object sender, RoutedEventArgs e)
         {
-            Product product = new Product("Топор Trench Hawk", "3450 руб.");
+            Product product = new Product("Топор Trench Hawk", 3450);
             AddProductInCart(product); //вызов метода добавления продукта в корзину
+            СhangeOrderPrice(product);
         }
 
 
         private void AddProductFourInCart_Click(object sender, RoutedEventArgs e)
         {
-            Product product = new Product("Нож Fallkniven PRK Z", "10200 руб.");
+            Product product = new Product("Нож Fallkniven PRK Z", 10200);
             AddProductInCart(product); //вызов метода добавления продукта в корзину
+            СhangeOrderPrice(product);
         }
 
         private void AddProductInCart(Product product) //сюда передает объект типа продукт
@@ -117,6 +104,14 @@ namespace WPFProject.Windows
                 }
  	        }
             listProducts.Add(product); //если продукта такого нет, то создать
+        } 
+        
+        private void СhangeOrderPrice(Product product) //сюда передает объект типа продукт
+        { 
+            if (cart != null) //если окно карзины есть, то список в окне обновить
+            {
+                cart.IncreaseOrderPrice(product);
+            }
         }
 
     }

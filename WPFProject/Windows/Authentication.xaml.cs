@@ -58,7 +58,7 @@ namespace WPFProject.Windows
                             MainClient mainClient = new MainClient(item);
                             mainClient.Show();
                         }
-                        AllWindows.mainWindow.Close();
+                        AllWindows.MainWindow.Close();
                         this.Close();
                         return;
                     }

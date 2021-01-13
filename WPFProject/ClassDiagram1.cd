@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WPFProject.Additional_classes.AllWindows">
+    <Position X="9.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAgAgAAAAAAAAEAAAAAACAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Additional classes\AllWindows.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFProject.Additional_classes.Orders" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Additional classes\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFProject.Additional_classes.Order" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAIAAEACAAQAAAAAgAAAAAACAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Additional classes\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFProject.Additional_classes.Product" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAIAAAAEAAAAAAAAAgAAIAAA=</HashCode>
+      <FileName>Additional classes\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFProject.Additional_classes.Users">
+    <Position X="3.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Additional classes\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFProject.Additional_classes.User" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAAAAAAAAAABAQAAAACAACAACAAAAAAAAAAA=</HashCode>
+      <FileName>Additional classes\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFProject.Additional_classes.WorkWithXML">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgwAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Additional classes\WorkWithXML.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFProject.App" Collapsed="true">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFProject.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="8.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAgAIJAAAABAACAAgAAgAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WPFProject.Properties.Resources">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFProject.Properties.Settings">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WPFProject.Windows.Authentication" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.75" Y="6.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Windows\Authentication.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WPFProject.Windows.Cart" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAgAAgAAAAAAAAAAgAAAQA=</HashCode>
+      <FileName>Windows\Cart.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WPFProject.Windows.MainAdmin" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.75" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAQAAAAAAAAAACAgAAAAAAAAAAAAAAAAAAQQ=</HashCode>
+      <FileName>Windows\MainAdmin.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WPFProject.Windows.MainClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="7.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAgAIJAAAAAAACAAAgAgAAACAAAAAAAAAAAAQQ=</HashCode>
+      <FileName>Windows\MainClient.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WPFProject.Windows.MainEmployee" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.75" Y="8.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEAEAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAACQQ=</HashCode>
+      <FileName>Windows\MainEmployee.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WPFProject.Windows.MyPersonalData" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Windows\MyPersonalData.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WPFProject.Windows.Promotion" BaseTypeListCollapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Windows\Promotion.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WPFProject.Windows.Registration" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="7.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Windows\Registration.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

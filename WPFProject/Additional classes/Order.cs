@@ -29,7 +29,7 @@ namespace WPFProject.Additional_classes
                     return;
                 _orderStatus = value;
                 
-                AllWindows.mainEmployee.DeletedOrder(this); //если поменять статус заказа, он удалится из списка заказов
+                AllWindows.MainEmployee.DeletedOrder(this); //если поменять статус заказа, он удалится из списка заказов
             }
         }
         

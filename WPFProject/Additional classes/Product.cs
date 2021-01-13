@@ -15,7 +15,7 @@ namespace WPFProject.Additional_classes
         private bool _delete;
 
         public string ProductName { get; set; }
-        public string Price { get; set; }
+        public int Price { get; set; }
         public int Quantity { get; set; } = 1;
         public bool Delete
         {
@@ -26,12 +26,12 @@ namespace WPFProject.Additional_classes
                     return;
                 _delete = value;
 
-                AllWindows.cart.DeletedProduct(this); //если поменять статус заказа, он удалится из списка заказов
+                AllWindows.Cart.DeletedProduct(this); //если поменять статус заказа, он удалится из списка заказов
             }
         }
 
 
-        public Product(string productName, string price)
+        public Product(string productName, int price)
         {
             ProductName = productName;
             Price = price;

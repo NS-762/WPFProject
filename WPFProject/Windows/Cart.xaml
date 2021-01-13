@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFProject.Windows"
         mc:Ignorable="d"
+        ResizeMode="CanMinimize"
         Title="Cart" Height="450" Width="700">
     <Window.Background>
         <ImageBrush ImageSource="C:\Users\Natas\source\repos\WPFProject\WPFProject\Resources\fonCart.png" />
@@ -13,7 +14,7 @@
 
         <StackPanel>
 
-            <DataGrid x:Name="dgProducts" Height="280" Width="500" AutoGenerateColumns="false" Margin="0, 50, 0, 0">
+            <DataGrid x:Name="dgProducts" Height="250" Width="500" AutoGenerateColumns="false" Margin="0, 50, 0, 0">
                 <DataGrid.Columns>
                     <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path=ProductName}" Header="Название товара" Width="*"/>
                     <DataGridTextColumn IsReadOnly="True" Binding="{Binding Path=Price}" Header="Цена за шт." Width="90"/>
@@ -22,7 +23,23 @@
                 </DataGrid.Columns>
             </DataGrid>
 
-            <Button Content="Заказать" Width="100" Margin="0, 20, 0, 0" Background="White" Click="ButtonBuy_Click"/>
+            <TextBlock Name="labelOrderPrice" Width="498" Background="#bae392">
+                Сумма заказа:
+            </TextBlock>
+
+            <TextBlock Name="labelUserCash" Width="498" Background="#bae392">
+                На вашем счету:
+            </TextBlock>
+
+
+            <WrapPanel>
+                <Button Content="Пополнить счет" Width="100" Margin="235, 20, 0, 0" Background="White" Click="ButtonAddFunds_Click"/>
+                <Button Content="Заказать" Width="100" Margin="20, 20, 0, 0" Background="White" Click="ButtonBuy_Click"/>
+            </WrapPanel>
+            
+            
+
+            
 
         </StackPanel>
 
