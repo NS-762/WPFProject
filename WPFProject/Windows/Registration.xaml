@@ -1,35 +1,41 @@
-﻿<Window x:Class="WPFProject.Windows.Registration"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFProject.Windows"
+        xmlns:ViewModel="clr-namespace:WPFProject.ViewModel" x:Class="WPFProject.Windows.Registration"
         ResizeMode="CanMinimize"
         mc:Ignorable="d"
         Title="Registration" Height="385" Width="250">
 
+    <Window.DataContext>
+        <ViewModel:RegistrationVM/>
+    </Window.DataContext>
+
     <StackPanel Margin="5">
         <Label Content="Фамилия:"/>
-        <TextBox Name="textBoxSecondName"/>
+        <TextBox x:Name="textBoxSecondName" Text="{Binding SecondName}"/>
 
         <Label Content="Имя:"/>
-        <TextBox Name="textBoxFirstName"/>
+        <TextBox x:Name="textBoxFirstName" Text="{Binding FirstName}"/>
 
         <Label Content="Отчество:"/>
-        <TextBox Name="textBoxThirdName"/>
+        <TextBox x:Name="textBoxThirdName" Text="{Binding ThirdName}"/>
 
         <Label Content="Телефон:"/>
-        <TextBox Name="textBoxPhoneNumber"/>
+        <TextBox x:Name="textBoxPhoneNumber" Text="{Binding PhoneNumber}"/>
 
         <Label Content="E-mail:"/>
-        <TextBox Name="textBoxEMail"/>
+        <TextBox x:Name="textBoxEMail" Text="{Binding EMail}"/>
 
         <Label Content="Пароль:"/>
-        <PasswordBox Name="textBoxPassword"/>
+        <PasswordBox x:Name="passwordBox"/>
 
 
         <Label Content=""/>
-        <Button Click="ButtonRegistration_Click" Background="#FFA49984" BorderBrush="#FFA49984" Foreground="White" FontWeight="Bold" Height="30" Width="150">Зарегистрироваться</Button>
+        <Button  CommandParameter="{Binding ElementName=passwordBox }" Background="#FFA49984" BorderBrush="#FFA49984" Foreground="White"
+                 FontWeight="Bold" Height="30" Width="150" Content="Зарегистрироваться" Command="{Binding RegistrationCommand, Mode=OneWay}"/>
 
     </StackPanel>
 </Window>

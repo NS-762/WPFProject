@@ -42,13 +42,15 @@ namespace WPFProject
             if (content.Length == 0) //если файл существует, но пустой
             {
                 WorkWithXML.SerializeAdminXML(); //поместить в него админа
-            } 
-            else //если файл не пустой
-            {
-                WorkWithXML.DeSerializeXML(); //провести десериализацию
             }
+            //else //если файл не пустой
+            //{
+            //    WorkWithXML.DeSerializeXML(); //провести десериализацию
+            //}
 
-            listProducts = new BindingList<Product>(); //список опкупок
+            WorkWithXML.DeSerializeXML(); //провести десериализацию ()
+
+            listProducts = new BindingList<Product>(); //список покупок
 
             Promotion promotion = new Promotion(); //вызов окна с акцией
             promotion.Show();

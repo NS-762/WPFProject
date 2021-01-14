@@ -78,6 +78,9 @@
     <Compile Include="Additional classes\Product.cs" />
     <Compile Include="Additional classes\Users.cs" />
     <Compile Include="Additional classes\WorkWithXML.cs" />
+    <Compile Include="ViewModel\ActionCommand.cs" />
+    <Compile Include="ViewModel\AuthenticationVM.cs" />
+    <Compile Include="ViewModel\RegistrationVM.cs" />
     <Compile Include="Windows\Authentication.xaml.cs">
       <DependentUpon>Authentication.xaml</DependentUpon>
     </Compile>
@@ -166,6 +169,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

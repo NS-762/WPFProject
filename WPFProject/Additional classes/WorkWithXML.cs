@@ -31,12 +31,24 @@ namespace WPFProject.Additional_classes
             using (FileStream fs = new FileStream("Users.xml", FileMode.Create))
             {
                 User admin = new User(
-                "Администратор", "Иван", "Иванов", "Иванович", "55-55-55", "IvanovII@mail.ru", "123123" ); //создание пользователя и заполнение его полей
+                "Администратор", "Иван", "Иванов", "Иванович", "55-55-55", "IvanovII@mail.ru", "123123"); //создание пользователя и заполнение его полей
 
                 Users.listUsers.Add(admin); //добавление пользователя в список пользователей
                 xml.Serialize(fs, Users.listUsers);
             }
         }
 
+/*        public static void SerializeAdminXML() //сериализация админа
+        {
+            using (FileStream fs = new FileStream("Users.xml", FileMode.Create))
+            {
+                User admin = new User(
+                "Администратор", "Иван", "Иванов", "Иванович", "55-55-55", "1", "1" ); //создание пользователя и заполнение его полей
+
+                Users.listUsers.Add(admin); //добавление пользователя в список пользователей
+                xml.Serialize(fs, Users.listUsers);
+            }
+        }
+*/
     }
 }

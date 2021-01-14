@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPFProject.Additional_classes;
 
 namespace WPFProject.Windows
 {
@@ -22,6 +23,8 @@ namespace WPFProject.Windows
         public MyPersonalData(string userType, string firstName, string secondName, string thirdName, string phoneNumber, string eMail/*, string password*/)
         {
             InitializeComponent();
+
+            //AllWindows.myPersonalData = this;
             labelUserType.Content = userType;
             labelFirstName.Content = firstName;
             labelSecondName.Content = secondName;

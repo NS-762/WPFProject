@@ -14,5 +14,7 @@ namespace WPFProject.Additional_classes
         public static Windows.MainEmployee MainEmployee { get; set; }
         public static Windows.MainClient MainClient { get; set; }
         public static Windows.Cart Cart { get; set; }
+        public static Windows.Authentication Authentication { get; set; }
+        //public static Windows.MyPersonalData myPersonalData { get; set; }
     }
 }
